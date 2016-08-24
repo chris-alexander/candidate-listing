@@ -1,0 +1,7 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["xo-space", "xo-react/space"],
+  "env": {
+    "browser": true
+  }
+}
