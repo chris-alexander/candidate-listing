@@ -16,14 +16,14 @@ var config = {
   module: {
     preLoaders: [
       { /* Lint JavaScript */
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: /src/,
         loader: 'eslint'
       }
     ],
     loaders: [
       { /* Compile ES6 and JSX to ES5 */
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel'
       },
