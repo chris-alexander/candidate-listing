@@ -7,12 +7,20 @@ var Candidate = React.createClass({
     details: React.PropTypes.object.isRequired,
     experience: React.PropTypes.array.isRequired
   },
+  getInitialState: function () {
+    return {
+      hideDetails: true
+    };
+  },
+  handleClick: function () {
+    this.setState({hideDetails: !this.state.hideDetails});
+  },
   render: function () {
     return (
-      <div className="candidate">
+      <div className="candidate" onClick={this.handleClick}>
         <h3>{this.props.details.name}</h3>
-        <div className="candidate--details">
-          <p>{this.props.details.birthDate}</p>
+        <p className="candidate--birthDate" hidden={this.state.hideDetails}>{this.props.details.birthDate}</p>
+        <div className="candidate--details" hidden={this.state.hideDetails}>
           <div className="candidate--experience">
             {this.props.experience.map(function (position, index) {
               return (
