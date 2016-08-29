@@ -1,12 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-// var MainView = require('./views/Main');
+
+var MainView = require('./components/Main');
 
 require('./main.scss');
 
 document.addEventListener('DOMContentLoaded', function () {
   ReactDOM.render(
-    React.createElement('MainView'),
+    <MainView/>,
     document.querySelector('#root')
   );
 });
