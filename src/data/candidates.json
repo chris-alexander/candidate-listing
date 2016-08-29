@@ -1,6 +1,7 @@
 {
-  "dataList": [
+  "candidates": [
     {
+      "id": 0,
       "basics": {
         "name": "John Smith",
         "birthDate": "1985-07-12"
@@ -16,6 +17,7 @@
       ]
     },
     {
+      "id": 1,
       "basics": {
         "name": "Sarah Jones",
         "birthDate": "1981-10-05"
@@ -45,6 +47,7 @@
       ]
     },
     {
+      "id": 2,
       "basics": {
         "name": "Kelly Anderson",
         "birthDate": "1987-02-28"
