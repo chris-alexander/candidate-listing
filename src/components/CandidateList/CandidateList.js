@@ -28,7 +28,7 @@ var CandidateList = React.createClass({
   render: function () {
     return (
       <div className="candidate-list">
-        <h2 className="heading-medium">Candidates:</h2>
+        <h2 className="heading-large">Candidates:</h2>
         {this.state.data.map(function (candidate) {
           return (
             <Candidate

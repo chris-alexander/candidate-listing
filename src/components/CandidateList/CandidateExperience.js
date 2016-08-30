@@ -10,9 +10,8 @@ var CandidateExperience = React.createClass({
     var dateRange = parseDate(this.props.data.startDate) + ' - ' + parseDate(this.props.data.endDate);
     return (
       <div className="position">
-        <p className="position__header">{this.props.data.position} at {this.props.data.company}
-          <span className="position__date">{dateRange}</span>
-        </p>
+        <h4 className="position__header heading-small">{this.props.data.position} at {this.props.data.company}</h4>
+        <p className="position__date">{dateRange}</p>
         <p className="position__summary">{this.props.data.summary}</p>
       </div>
     );
