@@ -24,7 +24,7 @@ As you make changes to the source code the page will update.
 
 Run `npm run build` to compile a production version of the web page. The compiled code will be output into the `dist` folder.
 
-TO DO: A pre-compiled production version will be available to view here <https://chris-aleander.github.io/candidates-listing>
+TO DO: A pre-compiled production version will be available to view here <https://chris-alexander.github.io/candidates-listing>
 
 ## Tests
 
