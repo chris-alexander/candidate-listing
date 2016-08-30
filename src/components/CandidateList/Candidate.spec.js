@@ -30,7 +30,7 @@ describe('<Candidate>', function () {
   });
 
   it('does not show candidate details by default', function () {
-    expect(wrapper.find('.candidate--birthDate').prop('hidden')).toBe(true);
-    expect(wrapper.find('.candidate--details').prop('hidden')).toBe(true);
+    expect(wrapper.find('.candidate__birthDate').prop('hidden')).toBe(true);
+    expect(wrapper.find('.candidate__details').prop('hidden')).toBe(true);
   });
 });

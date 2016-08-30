@@ -18,10 +18,10 @@ var Candidate = React.createClass({
   render: function () {
     return (
       <div className="candidate" onClick={this.handleClick}>
-        <h3>{this.props.details.name}</h3>
-        <p className="candidate--birthDate" hidden={this.state.hideDetails}>{this.props.details.birthDate}</p>
-        <div className="candidate--details" hidden={this.state.hideDetails}>
-          <div className="candidate--experience">
+        <h3 className="heading-small">{this.props.details.name}</h3>
+        <p className="candidate__birthDate" hidden={this.state.hideDetails}>{this.props.details.birthDate}</p>
+        <div className="candidate__details" hidden={this.state.hideDetails}>
+          <div className="candidate__experience">
             {this.props.experience.map(function (position, index) {
               return (
                 <CandidateExperience data={position} key={index}/>
