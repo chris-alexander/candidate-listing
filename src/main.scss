@@ -1,31 +1,11 @@
-@import "~govuk_frontend_toolkit/stylesheets/colours";
-@import "~govuk_frontend_toolkit/stylesheets/font_stack";
-@import "~govuk_frontend_toolkit/stylesheets/measurements";
+@import './styles/govuk_frontend_toolkit';
+@import './styles/govuk-elements-sass';
 
-@import "~govuk_frontend_toolkit/stylesheets/conditionals";
-@import "~govuk_frontend_toolkit/stylesheets/device-pixels";
-@import "~govuk_frontend_toolkit/stylesheets/grid_layout";
-@import "~govuk_frontend_toolkit/stylesheets/typography";
-@import "~govuk_frontend_toolkit/stylesheets/shims";
 
-@import "~govuk_frontend_toolkit/stylesheets/design-patterns/alpha-beta";
-@import "~govuk_frontend_toolkit/stylesheets/design-patterns/buttons";
-
-$path: "/assets/images/";
-
-@import "~govuk-elements-sass/public/sass/elements/helpers";
-@import "~govuk-elements-sass/public/sass/elements/reset";
-@import "~govuk-elements-sass/public/sass/elements/layout";
-@import "~govuk-elements-sass/public/sass/elements/elements-typography";
-@import "~govuk-elements-sass/public/sass/elements/buttons";
-@import "~govuk-elements-sass/public/sass/elements/icons";
-@import "~govuk-elements-sass/public/sass/elements/lists";
-@import "~govuk-elements-sass/public/sass/elements/tables";
-@import "~govuk-elements-sass/public/sass/elements/details";
-@import "~govuk-elements-sass/public/sass/elements/panels";
-@import "~govuk-elements-sass/public/sass/elements/phase-banner";
-@import "~govuk-elements-sass/public/sass/elements/components";
-@import "~govuk-elements-sass/public/sass/elements/shame";
+.header {
+  background-color: $black;
+  width: 100%;
+}
 
 #root {
   @extend %site-width-container;
