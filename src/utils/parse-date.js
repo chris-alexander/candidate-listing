@@ -1,16 +1,16 @@
 var months = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
+  'January',
+  'February',
+  'March',
+  'April',
   'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec'
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
 ];
 
 function parseDate(input) {
@@ -19,6 +19,7 @@ function parseDate(input) {
   }
   input = input.split('-').reverse();
   input[1] = months[input[1] - 1];
+  input[0] = Number(input[0]);
   return input.join(' ');
 }
 
