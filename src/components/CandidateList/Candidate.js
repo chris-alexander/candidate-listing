@@ -21,16 +21,18 @@ var Candidate = React.createClass({
     var birthDate = parseDate(this.props.details.birthDate);
     return (
       <div className="candidate">
-        <h3 className="heading-medium" onClick={this.handleClick}>{this.props.details.name}</h3>
-        <p className="candidate__birthDate" hidden={this.state.hideDetails}>Date of Birth: {birthDate}</p>
+        <h2 className="heading-medium" onClick={this.handleClick}>{this.props.details.name}</h2>
         <div className="candidate__details" hidden={this.state.hideDetails}>
+          <p className="candidate__birthDate">Date of Birth: {birthDate}</p>
           <div className="candidate__experience">
-            {this.props.experience.map(function (position, index) {
+            <h3 className="heading-small">Experience:</h3>
+            <ol className="list">{this.props.experience.map(function (position, index) {
               return (
                 <CandidateExperience data={position} key={index}/>
               );
-            })}
+            })}</ol>
           </div>
+          <hr/>
         </div>
       </div>
     );
