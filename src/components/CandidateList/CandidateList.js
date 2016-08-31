@@ -29,14 +29,14 @@ var CandidateList = React.createClass({
     return (
       <div className="candidate-list">
         <h1 className="heading-large">Candidates:</h1>
-        {this.state.data.map(function (candidate) {
+        <ul className="list">{this.state.data.map(function (candidate) {
           return (
             <Candidate
               details={candidate.basics}
               experience={candidate.work}
               key={candidate.id}
               />);
-        })}
+        })}</ul>
       </div>
     );
   }

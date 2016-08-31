@@ -26,11 +26,10 @@ describe('<Candidate>', function () {
   });
 
   it('displays the candidate\'s name', function () {
-    expect(wrapper.find('h3').text()).toEqual(mockDetals.name);
+    expect(wrapper.find('.candidate__name').text()).toEqual(mockDetals.name);
   });
 
   it('does not show candidate details by default', function () {
-    expect(wrapper.find('.candidate__birthDate').prop('hidden')).toBe(true);
-    expect(wrapper.find('.candidate__details').prop('hidden')).toBe(true);
+    expect(wrapper.find('.candidate__details').prop('open')).toBe(undefined);
   });
 });
