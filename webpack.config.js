@@ -14,7 +14,7 @@ var config = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[hash].bundle.js'
   },
   module: {
     preLoaders: [
@@ -42,7 +42,7 @@ var config = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('[contenthash].[name].css'),
     new CopyWebpackPlugin([
       {
         from: 'data/candidates.json',
@@ -55,6 +55,11 @@ var config = {
 if (NODE_ENV === 'production') {
   config.plugins = [
     new CleanWebpackPlugin(['dist']),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {

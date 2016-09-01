@@ -6,7 +6,7 @@ var MainView = React.createClass({
   render: function () {
     return (
       <div>
-        <CandidateList url="/data/candidates.json"/>
+        <CandidateList url="./data/candidates.json"/>
       </div>
     );
   }
