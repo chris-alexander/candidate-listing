@@ -1,4 +1,7 @@
+var NODE_ENV = process.env.NODE_ENV || 'development';
+
 var path = require('path');
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -45,9 +48,20 @@ var config = {
         from: 'data/candidates.json',
         to: 'data'
       }
-    ]),
-    new CleanWebpackPlugin(['dist'])
+    ])
   ]
 };
+
+if (NODE_ENV === 'production') {
+  config.plugins = [
+    new CleanWebpackPlugin(['dist']),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ].concat(config.plugins);
+}
 
 module.exports = config;
