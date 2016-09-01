@@ -30,7 +30,14 @@
 }
 
 .candidate__experience {
-
+  .heading-medium {
+    margin-top: em(18, 20);
+    margin-bottom: em(10,20);
+    @include media(tablet) {
+      margin-top: em(28, 24);
+      margin-bottom: em(20,24);
+    }
+  }
 }
 
 .position {
@@ -38,11 +45,18 @@
 }
 
 .position__header {
-
+  p {
+    margin-top: em(4, 16);
+    margin-bottom: em(12, 16);
+    @include media(tablet) {
+      margin-top: em(4);
+      margin-bottom: em(12);
+    }
+  }
 }
 
 .position__date {
-
+  font-style: italic;
 }
 
 .position__summary {

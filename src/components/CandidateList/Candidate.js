@@ -14,11 +14,11 @@ var Candidate = React.createClass({
     return (
       <li>
         <details className="candidate">
-          <summary className="candidate__name heading-medium">{this.props.details.name}</summary>
+          <summary className="candidate__name bold-medium">{this.props.details.name}</summary>
           <div className="candidate__details">
-            <p className="candidate__birthDate">Date of Birth: {birthDate}</p>
+            <p className="candidate__birthDate font-small">Date of Birth: {birthDate}</p>
             <div className="candidate__experience">
-              <h3 className="heading-small">Experience:</h3>
+              <h3 className="heading-medium">Experience:</h3>
               <ol className="list">{this.props.experience.map(function (position, index) {
                 return (
                   <CandidateExperience data={position} key={index}/>
