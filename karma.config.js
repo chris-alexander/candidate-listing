@@ -11,13 +11,14 @@ module.exports = function (config) {
   config.set({
     browsers: ['Chrome'],
     singleRun: true,
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
     files: ['tests.webpack.js'],
     preprocessors: {
       'tests.webpack.js': ['webpack', 'sourcemap']
     },
     plugins: [
       'karma-mocha',
+      'karma-chai',
       'karma-webpack',
       'karma-chrome-launcher',
       'karma-spec-reporter',
