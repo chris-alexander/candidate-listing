@@ -4,6 +4,7 @@ var expect = require('chai').expect;
 var enzyme = require('enzyme');
 
 var MainView = require('./Main');
+var CandidateList = require('./CandidateList/CandidateList');
 
 describe('<MainView>', function () {
   var wrapper;
@@ -11,7 +12,7 @@ describe('<MainView>', function () {
     wrapper = enzyme.shallow(<MainView/>);
   });
 
-  xit('does a thing', function () {
-    expect(wrapper.find('h1').first().text()).to.equal('Hello World');
+  it('renders the CandidateList component', function () {
+    expect(wrapper.find(CandidateList)).to.have.length(1);
   });
 });
