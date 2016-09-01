@@ -7,7 +7,7 @@ var CandidateExperience = React.createClass({
     data: React.PropTypes.object.isRequired
   },
   render: function () {
-    var dateRange = parseDate(this.props.data.startDate) + ' to ' + parseDate(this.props.data.endDate);
+    var dateRange = parseDate(this.props.data.startDate, true) + ' to ' + parseDate(this.props.data.endDate, true);
     return (
       <li className="position">
         <p className="position__header bold-small"><em>{this.props.data.position}</em> at {this.props.data.company}</p>
