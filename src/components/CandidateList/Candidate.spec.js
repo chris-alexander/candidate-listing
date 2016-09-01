@@ -32,4 +32,9 @@ describe('<Candidate>', function () {
   it('does not show candidate details by default', function () {
     expect(wrapper.find('.candidate__details').prop('open')).toBe(undefined);
   });
+
+  it('shows candidate details when candidate name is clicked', function () {
+    wrapper.find('.candidate__name').simulate('click');
+    expect(wrapper.find('.candidate__details').prop('open')).toBe(undefined);
+  });
 });
