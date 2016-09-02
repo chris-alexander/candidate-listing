@@ -1,5 +1,4 @@
 var webpackConfig = require('./webpack.config');
-webpackConfig.devtool = 'inline-source-map';
 webpackConfig.externals = {
   'cheerio': 'window',
   'react/addons': true,

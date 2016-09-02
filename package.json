@@ -27,6 +27,7 @@
     "eslint-config-xo-space": "^0.14.0",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^6.1.2",
+    "expose-loader": "^0.7.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
     "karma": "^1.2.0",
@@ -46,9 +47,9 @@
     "yargs": "^5.0.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "start": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --inline --hot",
     "lint": "./node_modules/.bin/eslint src",
-    "test": "./node_modules/.bin/karma start karma.config.js",
+    "test": "NODE_ENV=development ./node_modules/.bin/karma start karma.config.js",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p",
     "serve": "NODE_ENV=production node server"
   },

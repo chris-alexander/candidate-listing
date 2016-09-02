@@ -73,4 +73,14 @@ if (NODE_ENV === 'production') {
   ].concat(config.plugins);
 }
 
+if (NODE_ENV === 'development') {
+  config.devtool = 'inline-source-map';
+  config.module.loaders = [
+    { /* expose window.React for debugging */
+      test: require.resolve('react'),
+      loader: 'expose?React'
+    }
+  ].concat(config.module.loaders);
+}
+
 module.exports = config;
