@@ -1,7 +1,6 @@
 @import './styles/govuk_frontend_toolkit';
 @import './styles/govuk-elements-sass';
 
-
 .header {
   background-color: $black;
   height: 37px;
@@ -13,25 +12,6 @@ main {
   @extend %site-width-container;
 }
 
-.breadcrumbs li {
-  display: inline;
-}
-.candidate-list {
-
-}
-
-.candidate {
-
-}
-
-.candidate__details {
-
-}
-
-.candidate__birthdate {
-
-}
-
 .candidate__experience {
   .heading-medium {
     margin-top: em(18, 20);
@@ -41,10 +21,6 @@ main {
       margin-bottom: em(20,24);
     }
   }
-}
-
-.position {
-
 }
 
 .position__header {
@@ -60,8 +36,4 @@ main {
 
 .position__date {
   font-style: italic;
-}
-
-.position__summary {
-
 }
