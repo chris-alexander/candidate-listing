@@ -9,10 +9,13 @@
   margin: 0 auto;
 }
 
-#root {
+main {
   @extend %site-width-container;
 }
 
+.breadcrumbs li {
+  display: inline;
+}
 .candidate-list {
 
 }
