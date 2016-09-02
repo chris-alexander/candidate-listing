@@ -34,7 +34,8 @@ var CandidateList = React.createClass({
     return (
       <div className="candidate-list">
         <h1 className="heading-large">Candidates:</h1>
-        <p>Below you will find a list of Candidates who have been shortlisted for your vacancy: <em>{vacancyRef}</em>. Click on each candidate's name to view more detail. Please contact your HR business partner when you have chosen a suitable candidate.</p>
+        <p className="text">Below you will find a list of Candidates who have been shortlisted for your vacancy: <em>{vacancyRef}</em>. Click on each candidate's name to view more detail. Please contact your HR business partner when you have chosen a suitable candidate.</p>
+        <hr/>
         <ul className="list">{candidates.map(function (candidate) {
           return (
             <Candidate

@@ -2,10 +2,24 @@
 @import './styles/govuk-elements-sass';
 
 .header {
-  background-color: $black;
-  height: 37px;
   width: 100%;
-  margin: 0 auto;
+  .header__wrapper {
+    @extend %site-width-container;
+    background-color: $black;
+    min-height: 48px;
+    margin: 0;
+    padding-top: 16px;
+    nav {
+      padding-left: $gutter;
+    }
+    a {
+    @include core-24;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+    padding-top: 10px;
+    }
+  }
 }
 
 main {
