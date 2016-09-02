@@ -47,6 +47,10 @@ var config = {
       {
         from: 'data/candidates.json',
         to: 'data'
+      },
+      {
+        from: 'assets/images/',
+        to: 'assets/images'
       }
     ])
   ]
