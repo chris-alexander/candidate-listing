@@ -1,4 +1,10 @@
 {
+  "vacancy": {
+    "reference": "ABC123",
+    "title": "Business Analyst",
+    "area": "Corporate Finance",
+    "grade": "HEO"
+  },
   "candidates": [
     {
       "id": 0,
