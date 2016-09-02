@@ -24,6 +24,8 @@ As you make changes to the source code the page will update.
 
 Run `npm run build` to compile a production version of the web page. The compiled code will be output into the `dist` folder.
 
+You can serve the page by running `npm run serve` and it will be available at <http://localhost:3000>. You can change the port by adding `-- --port` followed by the 4 digit port number e.g. `npm run serve -- --port 8081`.
+
 A pre-compiled production version is available to view here: <https://chris-alexander.github.io/candidate-listing>
 
 ## Tests

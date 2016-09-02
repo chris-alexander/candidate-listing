@@ -4,6 +4,7 @@
   "description": "A small webapp built using the GOV.UK frontend toolkit listing applicants for a job",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.14.0",
     "govuk-elements-sass": "^2.0.0",
     "govuk_frontend_toolkit": "^4.16.1",
     "jquery": "^3.1.0",
@@ -41,13 +42,15 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.0"
+    "webpack-dev-server": "^1.15.0",
+    "yargs": "^5.0.0"
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --inline --hot",
     "lint": "./node_modules/.bin/eslint src",
     "test": "./node_modules/.bin/karma start karma.config.js",
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p"
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p",
+    "serve": "NODE_ENV=production node server"
   },
   "repository": {
     "type": "git",
