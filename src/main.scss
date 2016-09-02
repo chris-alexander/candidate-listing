@@ -3,14 +3,16 @@
 
 .header {
   width: 100%;
+  background-color: $black;
   .header__wrapper {
     @extend %site-width-container;
-    background-color: $black;
     min-height: 48px;
-    margin: 0;
+    margin: 0 $gutter;
     padding-top: 16px;
     nav {
-      padding-left: $gutter;
+      @include media(tablet) {
+        padding-left: $gutter;
+      }
     }
     a {
     @include core-24;
